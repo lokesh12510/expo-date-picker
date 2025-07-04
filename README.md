@@ -1,29 +1,70 @@
-# Welcome to your Expo app 👋
+# Expo Date Picker Component
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This project demonstrates a **custom Date Picker component** for React Native apps using [Expo](https://expo.dev), supporting **web, iOS, and Android** platforms with a unified API and native-like experience.
 
-## Get started
+## Features
 
-1. Install dependencies
+- ✨ **Platform-adaptive**: Custom UI for Web, native pickers for iOS and Android.
+- 🗓️ **Consistent API**: Use the same props and events across all platforms.
+- 🎨 **Customizable**: Easily style and extend the date picker for your app's needs.
+- 🚀 **Expo-ready**: No native code or extra linking required.
+
+## Usage
+
+1. **Install dependencies**
 
    ```bash
    npm install
    ```
 
-2. Start the app
+2. **Start the app**
 
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+3. **Try the Date Picker**
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+   The main Date Picker component is in `components/Datepicker/index.tsx`. Example usage:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+   ```tsx
+   import DatePicker from "../components/Datepicker";
+
+   <DatePicker
+   	value={selectedDate}
+   	onChange={setSelectedDate}
+   	minimumDate={new Date(2020, 0, 1)}
+   	maximumDate={new Date(2030, 11, 31)}
+   />;
+   ```
+
+## Platform Details
+
+- **Web**: Custom calendar UI for a native-like experience in browsers.
+- **iOS**: Uses the native `DatePickerIOS` for seamless integration.
+- **Android**: Uses the native `DatePickerAndroid` dialog for a familiar look and feel.
+
+All platforms share the same API, so you can write cross-platform code without worrying about platform-specific details.
+
+## Why a Custom Date Picker?
+
+React Native and Expo provide some date picker solutions, but they often require native modules or have inconsistent APIs. This project offers:
+
+- A single, Expo-compatible component for all platforms
+- No need to eject or add custom native code
+- A consistent developer and user experience
+
+## Learn more about Date Pickers in React Native & Expo
+
+- [React Native DateTimePicker](https://github.com/react-native-datetimepicker/datetimepicker)
+- [Expo DateTimePicker docs](https://docs.expo.dev/versions/latest/sdk/date-time-picker/)
+- [Building custom pickers in React Native](https://blog.expo.dev/building-custom-date-and-time-pickers-in-react-native-5b7c6e2c6a9c)
+
+## Project Structure
+
+- `components/Datepicker/` — Main date picker logic and hooks
+- `app/` — App entry and screens
+- `assets/` — Images and fonts
 
 ## Get a fresh project
 
@@ -35,16 +76,9 @@ npm run reset-project
 
 This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
-## Learn more
+## Community & Resources
 
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- [Expo documentation](https://docs.expo.dev/)
+- [React Native documentation](https://reactnative.dev/)
+- [Expo on GitHub](https://github.com/expo/expo)
+- [Discord community](https://chat.expo.dev)
