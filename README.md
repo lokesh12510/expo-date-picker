@@ -49,17 +49,17 @@ export default function App() {
 
 ### Props
 
-| Prop             | Type        | Description                         |
-| ---------------- | ----------- | ----------------------------------- | -------------------------------- | ---- | -------------------------- |
-| onDateTimeSelect | (date: Date | null) => void                       | Callback when a date is selected |
-| initialDate      | Date        | Initially selected date             |
-| minDate          | Date        | Minimum selectable date             |
-| maxDate          | Date        | Maximum selectable date             |
-| disabledDates    | Date[]      | Array of dates to disable           |
-| weekStartsOn     | 0           | 1                                   | 0 = Sunday, 1 = Monday           |
-| locale           | "en"        | "fr"                                | "de"                             | "es" | Locale for calendar labels |
-| showTimePicker   | boolean     | Show time picker (if implemented)   |
-| responsive       | boolean     | Enable responsive layout (web only) |
+| Prop             | Type         | Description                         |
+| ---------------- | ------------ | ----------------------------------- | -------------------------------- | ----- | -------------------------- |
+| onDateTimeSelect | `(date: Date | null) => void`                      | Callback when a date is selected |
+| initialDate      | `Date`       | Initially selected date             |
+| minDate          | `Date`       | Minimum selectable date             |
+| maxDate          | `Date`       | Maximum selectable date             |
+| disabledDates    | `Date[]`     | Array of dates to disable           |
+| weekStartsOn     | `0           | 1`                                  | 0 = Sunday, 1 = Monday           |
+| locale           | `"en"        | "fr"                                | "de"                             | "es"` | Locale for calendar labels |
+| showTimePicker   | `boolean`    | Show time picker (if implemented)   |
+| responsive       | `boolean`    | Enable responsive layout (web only) |
 
 ---
 
